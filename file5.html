@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/black-family" rel="stylesheet">
+                
+    <title>Peliculas</title>
+</head>
+<body>
+    <!--Una API (interfaz de progrmacion de aplicaciones) es un conjunto de reglas y protocolos que permite a dos aplicaciones
+    comunicarse entre si de forma estandarizada. Funciona como un intermediario que procesa solicitudes de datos o
+    funcionalidades y devuelve una respuesta, permitiendo que aplicaciones como las redes socales o las apps del clima muestren
+informacion de otros servicios sin tener que desarrollarlo desde cero.
+
+
+Como funciona?
+     solicitud: envia una solicitud a traqvez de la api pidiendo una accion o datos especificos. por ejemplo, tu app del clima
+      solicita la temperatura actual a la api de un servicio meteorologico.
+    
+       procesamiento: la API de destino recibe la solicitud, la procesa (obtiene informacion solicitada o realiza la accion)
+        y la procesa, generando una respuesta en un formato estandar.
+       
+        Respuesta: La API devuelve la respuesta a la aplicacion que hizo la solicitud. En el ejemplo del clima, la res´puesta seria la temperatura
+        y otras revisiones meteorologicas-->
+       <style>
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-family: 'ShadowedBlack', sans-serif;
+        }
+
+        form{
+            display: flex;
+            justify-content:center;
+            margin-bottom: 50px;
+            font-family: 'IncisedBlack', sans-serif;
+        }
+       </style> 
+        <div class="container">
+
+            <h1>Bienvenido a mi Pagina de peliculas</h1>
+            <form id="form">
+                <input type="text" id="search" placeholder="Busca una pelicula">
+                <input type="submit" value="Buscar">
+            </form>
+            <section id="main" class="movies"></section>
+        </div>
+        <script>
+            const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc& api_key=3fd2be6f0c70a2a598f84ddfb75487c&page=1'
+
+            const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
+            const SEARCH_API = 'https://api.themoviedb.org/3/search/movie? api_key='
+        </script>
+</body>
+</html>
